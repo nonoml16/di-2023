@@ -1,0 +1,31 @@
+<ng-template #personModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">{{person.name}}</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li>{{person.height}}</li>
+        <li>{{person.mass}}</li>
+        <li>{{person.hair_color}}</li>
+        <li>{{person.skin_color}}</li>
+        <li>{{person.eye_color}}</li>
+        <li>{{person.birth_year}}</li>
+        <li>{{person.gender}}</li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+  </ng-template>
+
+
+<div class="card">
+    <img [src]="getPersonImage()" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{person.name}}</h5>
+      <p class="card-text">{{person.url}}
+      </p>
+      <button type="button" class="btn btn-primary" (click)="open(personModal)">View detail</button>
+    </div>
+  </div>
