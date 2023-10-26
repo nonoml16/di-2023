@@ -11,6 +11,6 @@ export class CharacterService {
   constructor(private http: HttpClient) { }
 
   getCharacterList(): Observable<CharacterResponse>{
-    return this.http.get<CharacterResponse>('https://thesimpsonsquoteapi.glitch.me/quotes?count=100');
+    return this.http.get<CharacterResponse>('https://apisimpsons.fly.dev/api/personajes?limit=100');
   }
 }

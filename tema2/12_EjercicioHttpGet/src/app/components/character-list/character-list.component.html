@@ -1,1 +1,6 @@
-<p *ngFor="let c of characterList">{{c}}</p>
+<div class="container">
+    <div class="row">
+        <app-character-item class="mt-2 col-3" *ngFor="let c of characterList"
+        [character]="c" (characterClick)="onCharacterClicked($event)"></app-character-item>
+    </div>
+</div>

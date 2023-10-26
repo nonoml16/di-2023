@@ -1,1 +1,48 @@
-<p>character-item works!</p>
+<ng-template #personModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{ character.Nombre }}</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-4">
+        <img [src]="getCharacterImage()" alt="" />
+      </div>
+      <div class="col-8">
+        <ul>
+          <li>{{ character.Genero }}</li>
+          <li>{{ character.Estado }}</li>
+          <li>{{ character.Ocupacion }}</li>
+          <li>{{ character.Historia }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="modal.close('Save click')"
+    >
+      Save
+    </button>
+  </div>
+</ng-template>
+
+<div class="card">
+  <div class="card-img-top tamano-imagen">
+    <img [src]="getCharacterImage()" height="100%" alt="..." />
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">{{ character.Nombre }}</h5>
+    <button type="button" class="btn btn-primary" (click)="open(personModal)">
+      View detail
+    </button>
+  </div>
+</div>
