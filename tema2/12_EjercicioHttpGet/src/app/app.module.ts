@@ -9,14 +9,15 @@ import { CharacterItemComponent } from './components/character-item/character-it
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CharacterListComponent,
-    CharacterItemComponent
+    AppComponent
+    
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    CharacterListComponent,
+    CharacterItemComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

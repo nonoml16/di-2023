@@ -4,6 +4,7 @@ import { Character } from 'src/app/models/character-list.interface';
 
 @Component({
   selector: 'app-character-item',
+  standalone: true,
   templateUrl: './character-item.component.html',
   styleUrls: ['./character-item.component.css']
 })
