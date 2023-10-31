@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Populares</h1>
+  <div
+    class="list-group list-group-horizontal position-relative overflow-auto w-100"
+  >
+    <app-movie-item
+      class="list-group-item"
+      *ngFor="let m of movieList"
+      [movie]="m"
+    ></app-movie-item>
+  </div>
+</div>
