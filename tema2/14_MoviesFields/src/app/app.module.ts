@@ -8,13 +8,15 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieTopRatedComponent } from './components/movie-top-rated/movie-top-rated.component';
+import { PageHomeComponent } from './ui/page-home/page-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviePopularListComponent,
     MovieItemComponent,
-    MovieTopRatedComponent
+    MovieTopRatedComponent,
+    PageHomeComponent
   ],
   imports: [
     BrowserModule,
